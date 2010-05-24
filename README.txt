@@ -14,7 +14,7 @@ Drush Make vs Drupal.org Distribution
 
 Though this installtion profile only includes
 valid Drupal code, the way it stores the different
-drupal versions, the Drupa.org Distribution will
+drupal versions, the Drupal.org Distribution will
 not include the needed API files.
 
 It is very suggested to install this via

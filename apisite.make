@@ -10,10 +10,10 @@ projects[] = "drupal"
 ; Drupal contrib
 projects[] = "install_profile_api"
 projects[] = "admin_menu"
-projects[] = "admin"
 projects[] = "job_queue"
 projects[] = "jquery_update"
 projects[] = "api"
+projects[] = "apisite"
 
 ; Drupal theme
 projects[] = "pixture"

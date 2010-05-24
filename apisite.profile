@@ -12,7 +12,7 @@
 function apisite_profile_details() {
   return array(
     'name' => 'API Site',
-    'description' => 'API Site creates a Drupal site that provides API documentation simiar to <a href="http://api.drupal.org">api.drupal.org</a>.',
+    'description' => 'API Site creates a Drupal site that provides API documentation similar to <a href="http://api.drupal.org">api.drupal.org</a>.',
   );
 }
 
@@ -139,7 +139,7 @@ function _apisite_batch_theme($args, &$context) {
   // Enable themes
   install_default_theme('pixture');
   $context['results'][] = t('Set default theme to Pixture.');
-  variable_set('admin_theme', 'slate');
+  variable_set('admin_theme', 'garland');
   $context['results'][] = t('Set default admin theme to Slate.');
   
   // Set random theme for fun (DOES NOT WORK AT THE MOMENT)
