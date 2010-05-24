@@ -13,7 +13,13 @@ projects[] = "admin_menu"
 projects[] = "job_queue"
 projects[] = "jquery_update"
 projects[] = "api"
+
+; We need the APISite profile
 projects[] = "apisite"
+;projects[data][type] = module
+;projects[data][download][type] = cvs
+;projects[data][download][module] = contributions/modules/apisite
+;projects[data][download][revision] = DRUPAL-6--1
 
 ; Drupal theme
 projects[] = "pixture"

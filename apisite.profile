@@ -36,7 +36,6 @@ function apisite_profile_modules() {
     'update',
     'upload',
     'user',
-    'admin',
     'admin_menu',
     'jquery_update',
     'job_queue',
