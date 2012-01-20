@@ -1,5 +1,3 @@
-; $Id$
-
 ; Helpful links
 ; http://drupal.org/node/642116
 
