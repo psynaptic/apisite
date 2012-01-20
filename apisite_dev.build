@@ -1,0 +1,18 @@
+; This make file is used for building the API Site distribution itself. Run
+; $ drush make apisite_dev.build your_dir to build the complete distribution
+; placed in the profiles/apisite directory.
+
+; Drupal core
+; -----------
+core = 6.x
+projects[drupal][type] = core
+projects[drupal][version] = "6.22"
+
+; Drush Make API version
+; -----------
+api = 2
+
+projects[apisite][type] = profile
+projects[apisite][download][type] = git
+projects[apisite][download][url] = http://git.drupal.org/project/apisite.git
+projects[apisite][download][branch] = 6.x-1.x
