@@ -1,38 +1,39 @@
-; Helpful links
-; http://drupal.org/node/642116
-
 ; Drupal core
-core = "6.x"
-projects[] = "drupal" 
+; -----------
+core = 6.x
+projects[drupal][type] = core
+projects[drupal][version] = "6.22"
 
-; Drupal contrib
-projects[] = "install_profile_api"
-projects[] = "admin_menu"
-projects[] = "job_queue"
-projects[] = "jquery_update"
-projects[] = "api"
+; Drush Make API version
+; -----------
+api = 2
 
-; We need the APISite profile
-projects[] = "apisite"
-;projects[data][type] = module
-;projects[data][download][type] = cvs
-;projects[data][download][module] = contributions/modules/apisite
-;projects[data][download][revision] = DRUPAL-6--1
+; Contrib modules
+; -----------
 
-; Drupal theme
-projects[] = "pixture"
+; The dev version of API has all of the new functionality. It is worth using it
+; instead of the stable version, which is now quite old.
+projects[api][type] = "module"
+projects[api][download][type] = "git"
+projects[api][download][url] = "http://git.drupal.org/project/api.git"
+projects[api][download][revision] = "bebfa545eb07801c04812d083ed076ea36688102"
+projects[api][subdir] = contrib
 
-; Drupal checkouts of core for API
-libraries[drupal_5][download][type] = "cvs"
-libraries[drupal_5][download][root] = ":pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal"
-libraries[drupal_5][download][revision] = "DRUPAL-5"
-libraries[drupal_5][download][module] = "drupal"
-libraries[drupal_6][download][type] = "cvs"
-libraries[drupal_6][download][root] = ":pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal"
-libraries[drupal_6][download][revision] = "DRUPAL-6"
-libraries[drupal_6][download][module] = "drupal"
-libraries[drupal_7][download][type] = "cvs"
-libraries[drupal_7][download][root] = ":pserver:anonymous:anonymous@cvs.drupal.org:/cvs/drupal"
-libraries[drupal_7][download][revision] = "HEAD"
-libraries[drupal_7][download][module] = "drupal"
+projects[autoload][version] = 2.1
+projects[autoload][subdir] = contrib
 
+projects[ctools][version] = 1.8
+projects[ctools][subdir] = contrib
+
+; Grammar Parser does not have a 6.x release but the 7.x code is compatible
+; with D6 by simply patching the .info file. This is recommended on the project
+; page. See http://drupal.org/node/994518 for more information.
+; @todo update patch for the 7.2 release.
+projects[grammar_parser][type] = module
+projects[grammar_parser][download][type] = get
+projects[grammar_parser][download][url] = http://ftp.drupal.org/files/projects/grammar_parser-7.x-1.1.tar.gz
+projects[grammar_parser][subdir] = contrib
+projects[grammar_parser][patch][] = "http://drupal.org/files/issues/grammar_parser.info.patch"
+
+projects[job_queue][version] = 3.1
+projects[job_queue][subdir] = contrib
