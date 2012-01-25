@@ -27,3 +27,16 @@ Installation
 6) Install Drupal with API Site profile
 7) Run cron until there are no more jobs left 
    in the queue (will take some time)
+
+To do
+=========================================
+
+This profile helps with aggregating all dependencies for an API site but doesn't
+go as far as setting up the API module for you. The immediate to do list is the
+following:
+
+- Work out a way to enable API module on installation without running into the
+  requirements problem.
+- Enable API navigation and search blocks on installation.
+- Set "access API reference" permission on installation.
+- Set home page to api.
