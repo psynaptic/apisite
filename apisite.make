@@ -16,8 +16,13 @@ api = 2
 projects[api][type] = "module"
 projects[api][download][type] = "git"
 projects[api][download][url] = "http://git.drupal.org/project/api.git"
-projects[api][download][revision] = "bebfa545eb07801c04812d083ed076ea36688102"
+projects[api][download][revision] = "6e4ea4ff965307b03c5546617da5b2b46be12c12"
 projects[api][subdir] = contrib
+; Add patch to improve directory parsing performance and memory usage by
+; skipping hidden any blacklisted directories. See
+; http://drupal.org/node/1411648 for further information.
+projects[api][patch][] = "http://drupal.org/files/1411648-onlythis.patch"
+
 
 projects[autoload][version] = 2.1
 projects[autoload][subdir] = contrib
