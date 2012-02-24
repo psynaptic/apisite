@@ -16,6 +16,7 @@ api = 2
 projects[api][type] = "module"
 projects[api][download][type] = "git"
 projects[api][download][url] = "http://git.drupal.org/project/api.git"
+projects[api][download][branch] = 6.x-1.x
 projects[api][subdir] = contrib
 
 projects[autoload][version] = 2.1
