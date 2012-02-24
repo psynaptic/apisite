@@ -16,19 +16,16 @@ api = 2
 projects[api][type] = "module"
 projects[api][download][type] = "git"
 projects[api][download][url] = "http://git.drupal.org/project/api.git"
-projects[api][download][revision] = "6e4ea4ff965307b03c5546617da5b2b46be12c12"
 projects[api][subdir] = contrib
-; Add patch to improve directory parsing performance and memory usage by
-; skipping hidden any blacklisted directories. See
-; http://drupal.org/node/1411648 for further information.
-projects[api][patch][] = "http://drupal.org/files/1411648-onlythis.patch"
-
 
 projects[autoload][version] = 2.1
 projects[autoload][subdir] = contrib
 
 projects[ctools][version] = 1.8
 projects[ctools][subdir] = contrib
+
+projects[drupal_queue][version] = 1.2
+projects[drupal_queue][subdir] = contrib
 
 ; Grammar Parser does not have a 6.x release but the 7.x code is compatible
 ; with D6 by simply patching the .info file. This is recommended on the project
@@ -40,5 +37,3 @@ projects[grammar_parser][download][url] = http://ftp.drupal.org/files/projects/g
 projects[grammar_parser][subdir] = contrib
 projects[grammar_parser][patch][] = "http://drupal.org/files/issues/grammar_parser.info.patch"
 
-projects[job_queue][version] = 3.1
-projects[job_queue][subdir] = contrib

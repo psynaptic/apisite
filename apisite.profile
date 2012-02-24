@@ -12,7 +12,7 @@
  *   An array of modules to enable.
  */
 function apisite_profile_modules() {
-  return array('help', 'menu', 'dblog', 'ctools', 'autoload', 'job_queue', 'grammar_parser');
+  return array('help', 'menu', 'dblog', 'ctools', 'autoload', 'drupal_queue', 'grammar_parser', 'api');
 }
 
 /**
