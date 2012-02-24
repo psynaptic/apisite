@@ -14,5 +14,5 @@ api = 2
 
 projects[apisite][type] = profile
 projects[apisite][download][type] = git
-projects[apisite][download][url] = http://git.drupal.org/project/apisite.git
+projects[apisite][download][url] = git@github.com:psynaptic/apisite.git
 projects[apisite][download][branch] = 6.x-1.x
